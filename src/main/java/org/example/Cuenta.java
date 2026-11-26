@@ -1,6 +1,8 @@
 package org.example;
 
-/** Clase cuentaCorriente*/
+/**
+ * Clase cuentaCorriente
+ */
 public class Cuenta {
     String dni;
     String nombreTitular;
@@ -8,7 +10,8 @@ public class Cuenta {
 
     /**
      * Constructor
-     * @param dni dni del titular de la cuenta
+     *
+     * @param dni           dni del titular de la cuenta
      * @param nombreTitular nombre del titular de la cuenta
      */
     Cuenta(String dni, String nombreTitular) {
@@ -33,7 +36,7 @@ public class Cuenta {
      */
     public boolean sacarDinero(double saldoASacar) {
         boolean esPosible = false;
-        if (saldoASacar <400 && saldoASacar < this.saldo) {
+        if (saldoASacar <= 400 && saldoASacar < this.saldo) {
             this.saldo = this.saldo - saldoASacar;
             esPosible = true;
         }
@@ -41,8 +44,8 @@ public class Cuenta {
     }
 
 
-    public String mostrarInformacion(){
-        return  this.dni + " " +  this.nombreTitular + " " + this.saldo;
+    public String mostrarInformacion() {
+        return this.dni + " " + this.nombreTitular + " " + this.saldo;
     }
 
     public String getDni() {
